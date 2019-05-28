@@ -1,9 +1,25 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
-const NavBar = () => (
+const Nav = () => (
   <Navbar>
-    <Navbar.Brand href="#home">Community Project</Navbar.Brand>
+    <Navbar.Brand><Link to="/">Community Project</Link></Navbar.Brand>
+    <Navbar.Collapse className="justify-content-end">
+      <Navbar.Text>
+        <Link to="/about">About</Link>
+      </Navbar.Text>
+    </Navbar.Collapse>
+    <Navbar.Collapse className="justify-content-end">
+      <Navbar.Text>
+        <Link to="/add">Add</Link>
+      </Navbar.Text>
+    </Navbar.Collapse>
+    <Navbar.Collapse className="justify-content-end">
+      <Navbar.Text>
+        <Link to="/commnet">Commnet</Link>
+      </Navbar.Text>
+    </Navbar.Collapse>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
@@ -13,4 +29,4 @@ const NavBar = () => (
   </Navbar>
 )
 
-export default NavBar
+export default Nav
